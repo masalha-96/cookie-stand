@@ -73,7 +73,7 @@ let Tokyo = {
     minCust: 3 ,
     maxCust: 24 ,
     numOfCust: 0,
-    avgCookie: 6.3 ,
+    avgCookie: 1.2 ,
 
 
     //methods
