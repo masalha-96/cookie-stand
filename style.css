@@ -1,0 +1,81 @@
+/* * {
+    box-sizing: border-box;
+}
+
+header{
+    display: block;
+    background-color: brown;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    padding: 20px;
+}
+
+
+
+header h1 {
+    color: cornsilk;
+    float:left;
+    padding: 10px;
+    font-size: 30px;
+}
+
+header nav ul {
+    float: right;
+    margin: 40px;
+}
+
+header nav ul a {
+    font-size: 30px;
+    text-decoration: none;
+    color: cornsilk;
+    margin: 50px;
+}
+
+
+
+ #ourStory {
+    width: 99%;
+    text-align: center;
+}
+
+#ourStory img {
+  width: 30%
+   
+}
+
+
+#top{
+    display:block;
+}
+#ourCookies{
+    position: static;
+    top: 300px;
+    width: 90%;
+    text-align: center;
+    border: 1px black solid; 
+   
+}
+
+#ourCookies div  {
+    margin: 100px;
+    width:20%;
+    text-align: center;
+    float: left;
+    border: 1px black solid; 
+   
+} */
+
+header nav ul a {
+    font-size: 30px;
+    text-decoration: none;
+    color: red;
+    margin: 50px;
+}
+
+footer{
+    font-size: 30px;
+    text-align: center;
+}
+
