@@ -33,7 +33,7 @@ let Seattle = {
             //document.write(`${this.time[i]}: ${randomNum(23, 65)} cookies`);  
             let listItems = document.createElement('li');
             theParent.appendChild(listItems);
-            let temp = randomNum(this.minCust, this.maxCust);
+            let temp = Math.floor(randomNum(this.minCust, this.maxCust)*Seattle.avgCookie);
             listItems.textContent = `${this.time[i]}: ${temp} cookies`;
             total += temp;
         }
@@ -91,7 +91,7 @@ let Tokyo = {
             //document.write(`${this.time[i]}: ${randomNum(23, 65)} cookies`);  
             let listItems = document.createElement('li');
             theParent.appendChild(listItems);
-            let temp = randomNum(this.minCust, this.maxCust);
+            let temp = Math.floor(randomNum(this.minCust, this.maxCust)*Tokyo.avgCookie);
             listItems.textContent = `${this.time[i]}: ${temp} cookies`;
             total += temp;
         }
@@ -148,8 +148,8 @@ let Dubai	 = {
             //document.write(`${this.time[i]}: ${randomNum(23, 65)} cookies`);  
             let listItems = document.createElement('li');
             theParent.appendChild(listItems);
-            let temp = randomNum(this.minCust, this.maxCust);
-            listItems.textContent = `${this.time[i]}: ${temp} cookies`;
+            let temp = Math.floor(randomNum(this.minCust, this.maxCust)*Dubai.avgCookie);
+            listItems.textContent = `${this.time[i]}: ${temp} cookies`; 
             total += temp;
         }
 
@@ -204,7 +204,8 @@ let Paris	 = {
             //document.write(`${this.time[i]}: ${randomNum(23, 65)} cookies`);  
             let listItems = document.createElement('li');
             theParent.appendChild(listItems);
-            let temp = randomNum(this.minCust, this.maxCust);
+           // let temp = randomNum(this.minCust, this.maxCust); // wrong one 
+           let temp = Math.floor(randomNum(this.minCust, this.maxCust)*Paris.avgCookie);
             listItems.textContent = `${this.time[i]}: ${temp} cookies`;
             total += temp;
         }
@@ -261,7 +262,7 @@ let Lima	 = {
             //document.write(`${this.time[i]}: ${randomNum(23, 65)} cookies`);  
             let listItems = document.createElement('li');
             theParent.appendChild(listItems);
-            let temp = randomNum(this.minCust, this.maxCust);
+            let temp = Math.floor(randomNum(this.minCust, this.maxCust)*Lima.avgCookie);
             listItems.textContent = `${this.time[i]}: ${temp} cookies`;
             total += temp;
         }
