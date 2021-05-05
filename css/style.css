@@ -1,107 +1,136 @@
-
 * {
-    box-sizing: border-box;
-    scroll-behavior:smooth;
+    font-family: Cinzel;
+    scroll-behavior: smooth;
+}
+main{
+   padding: 0 80px;
 }
 
-body {
-    font-family: "Grandstander", cursive;
-    background-color: #eeebdd;
+h1{
+    color: brown;
+    margin-top: 20px;
+    font-size: 40px;
+    text-align: left;
+    padding: 20px;
+    font-weight: bolder;
 }
 
+h2{
+color: brown;
+    font-size: 40px;
+    text-align: left;
+    margin-top: 150px;
+    font-weight: bolder;
+}
 
-header {
-    background-color: #810000;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 40px;
+h3{
+
+    font-size: 23px;
+    text-align: left;
+    padding: 20px;
+    font-weight: bold;
+    padding-left: 0;
+    font-size: 30px;
+
+}
+
+h5 {
+    font-size: 30px;
+    text-align: left;
+    padding: 20px;
+    font-weight: bold;
+    color: red;
+}
+
+#ourStory {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.5;
+    
+}
+
+body{
+    background-color:#E0D7AD;
 }
 
 footer {
-    font-size: 20px;
-   background-color: #810000;
-    width: 100%;
-    padding: 40px; 
-    color:#eeebdd;
+    color: black;
+    font-size: 25px;
+    padding: 50px;
     text-align: center;
+    clear: both;
+    background-color: #BAB28F;
+    
+}
+header {
+    display: flex;
+    align-items: center;
+    background-color: #BAB28F;
+    width: 100%;
+    
 }
 
-header h1 {
-    color: #eeebdd;
-    font-weight: bold;
-    float: left;
-    font-size: 25px;
+header img {
+    margin: 15px 80px ;
+    width: 20%;
 }
 
 header nav {
     float: right;
-    padding: 0 30px;
+    width: 70%;
+    margin: 0px;
+   
 }
 
 header nav ul li {
+    width: 20%;
     display: inline-block;
-    padding: 0 30px;
+    margin: 75px 0 ;
 }
+
 
 header nav ul li a {
+    color: brown;
+    font-family: Cinzel;
+    font-size: 25px;
+    font-weight: bolder;
     text-decoration: none;
-    color: #eeebdd;
-    text-transform: uppercase;
-    font-size: 15px;
 }
 
-#ourStory h2 {
 
-    font-size: 46px;
-    text-align: center;
-    margin: 37px;
-}
-#ourStory img {
+
+/* image style  */
+
+
+
+#firstchild {
     width: 100%;
-}
-#ourStory p {
-    font-size: 25px;
-    text-align: center;
+     padding: 30px 30px ; */
+     /* padding: 15px; */
 }
 
-#ourCookies {
-    margin: 100px;
+
+
+
+#right {
+ 
+    width: 50%;
+    float: right;
 }
 
-#ourCookies h2 {
-    font-size: 46px;
-    text-align: center;
-    margin: 37px;
-}
-.cookiesImages {
-    display: inline-block;
-    width: 33%;
+#left {
+    width: 50%;
+    float: left;
 }
 
-.cookiesImages h3 {
-    margin: 10px;
-    font-size: 20px;
+#ourStores{
+    clear:both;
+    margin: 40px;
+    padding: 20px 0;
 }
 
-.cookiesImages h4 {
-    color: red;
-    margin: 10px;
-    font-size: 15px;
+#ourStores ol li {
+    margin: 20px 0;
+  font-size: 30px;
 }
 
-#ourLocations{
-    margin: 100px;
-    padding: 10px;
-}
-
-#ourLocations h2 {
- font-size: 46px;
-
-}
-
-#ourLocations ol li {
-    font-size: 25px;
-    margin: 20px;
-
-}
