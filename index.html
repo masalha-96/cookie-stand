@@ -5,60 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pat's Salmon Cookies</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cinzel"
+      rel="stylesheet"
+    />
   </head>
-
   <body>
     <header>
-      <h1>Pat's Salmon Cookies</h1>
+      <img src="images/salmon.png" alt="logo" />
       <nav>
         <ul>
-          <li><a href="#ourStory"> Our Story </a></li>
-          <li><a href="#scrollMeToCookies"> Our Cookies </a></li>
-          <li><a href="#ourLocations"> Our Locations </a></li>
-          <li><a href="sales.html"> Sales </a></li>
+          <li><a href="#ourStoryH1"> Our Story </a></li>
+          <li><a href="#ourCookies">Our Cookies </a></li>
+          <li><a href="#ourStores">Our Stores</a></li>
+          <li><a href="sales.html">Sales </a></li>
         </ul>
       </nav>
     </header>
 
     <main>
+      <h1 id="ourStoryH1">Our Story</h1>
+      <p id="ourStory">
+        Pat's Salmon Cookies is a family business and is therefore unable to
+        handle large volumes of calls. If this makes you sad, why not stop by
+        and pick up some deliicious cookies to enjoy with your family.
+      </p>
+      <img id="firstchild" src="images/family.jpg" alt="Hero Image" />
 
-      <section id="ourStory">
-        <img  src="images/family.jpg" alt="pat family" />
-        <h2 >Our Story</h2>
-        <p>
-          Pat's Salmon Cookies is a family business and is therefore unable to
-          handle large volumes of calls. If this makes you sad, why not stop by
-          and pick up some deliicious cookies to enjoy with your family.
-        </p>
-      </section>
+      <h2 id = "ourCookies">Our Cookies</h2>
 
-      <div id="ourCookies">
-        <h2 id = "scrollMeToCookies">Our Cookies</h2>
-        <section class="cookiesImages">
+      <div id="right">
+        <div class="Products">
           <h3>Sockeye Salmon Cookie</h3>
-          <img src="images/fishies-1.png" alt="fishies-1" />
-          <h4>5$</h4>
-        </section>
-        <section class="cookiesImages">
+          <img src="images/fish.jpg" alt="Featured Section Banner" />
+          <h5>5$</h5>
+        </div>
+
+        <div class="Products">
           <h3>Raw Salmon Cookie</h3>
-          <img src="images/fishies-2.png" alt="pfishies-2" />
-          <h4>5$</h4>
-        </section>
-        <section class="cookiesImages">
+          <img src="images/fish.jpg" alt="Featured Section Banner" />
+          <h5>5$</h5>
+        </div>
+
+        <div class="Products"> 
           <h3>Chinook Salmon Cookie</h3>
-          <img src="images/fishies-3.png" alt="fishies-3" />
-          <h4>4$</h4>
-        </section>
+          <img src="images/fish.jpg" alt="Featured Section Banner" />
+          <h5>4$</h5>
+        </div>
       </div>
 
-      <section id="ourLocations">
-        <h2>Our Locations ( Our stores are OPEN : from 6AM TO 8PM )</h2>
+      <div id="left">
+        <div class="Products">
+          <h3>Sockeye Salmon Cookie</h3>
+          <img src="images/fish.jpg" alt="Featured Section Banner" />
+          <h5>5$</h5>
+        </div>
+
+        <div class="Products">
+          <h3>Cutter</h3>
+          <img src="images/cutter.jpeg" />
+          <h5>8$</h5>
+        </div>
+
+        <div class="Products">
+          <h3>Shirt</h3>
+          <img src="images/shirt.jpg" alt="Featured Section Banner" />
+          <h5>20$</h5>
+        </div>
+      </div>
+
+      <div id="ourStores">
+
+        <h2> Our Locations ( Our stores are OPEN : from 6AM TO 8PM ) </h2>
         <ol>
           
             <li>> Seattle 7268 NW 16th St, SE City, IA, 50226</li>
@@ -68,11 +88,10 @@
             <li>> Lima 7268 NW 16th St, Lima City, IA, 50226</li>
           
         </ol>
-      </section>
+      </div>
     </main>
-
-    <footer>&copy; Pat's Salmon Cookies 2021</footer>
-
-    <script src="app.js"></script>
+    <footer>
+&copy; Pat's Salmon Cookies 2021
+    </footer>
   </body>
 </html>
