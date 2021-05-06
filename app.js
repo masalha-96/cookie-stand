@@ -91,7 +91,8 @@ PatStors.prototype.addToTable = function () {
   let total = 0;
   let tr = document.createElement("tr");
   table.appendChild(tr);
-  let th = document.createElement("th");
+
+  let th = document.createElement("td");
   tr.appendChild(th);
   th.textContent = `${this.cityName}`;
 
@@ -152,9 +153,9 @@ let lastCol = function () {
   th.textContent = "Totals";
 
   for (let i = 0; i < sumOfRow.length; i++) {
-    let td = document.createElement("td");
-    tr.appendChild(td);
-    td.textContent = `${sumOfRow[i]}`;
+    let th = document.createElement("th");
+    tr.appendChild(th);
+    th.textContent = `${sumOfRow[i]}`;
   }
 
   th = document.createElement("th");
