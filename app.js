@@ -16,33 +16,30 @@ const time = [
   "7pm",
 ];
 
+let stores = [];
+
 let totalOfTotal = [];
-let arr1 = [];  
-let arr2 = [];  
-let arr3 = [];  
-let arr4 = [];  
-let arr5 = [];  
-let arr6 = [];  
-let arr7 = []; 
-let arr8 = [];  
-let arr9 =[];  
-let arr10=[];  
-let arr11=[];   
-let arr12 =[];  
-let arr13=[];  
-let arr14 =[];  
+let arr1 = [];
+let arr2 = [];
+let arr3 = [];
+let arr4 = [];
+let arr5 = [];
+let arr6 = [];
+let arr7 = [];
+let arr8 = [];
+let arr9 = [];
+let arr10 = [];
+let arr11 = [];
+let arr12 = [];
+let arr13 = [];
+let arr14 = [];
 let sumOfRow = [];
-
-
-
 
 let MyDiv = document.getElementById("Sales");
 
 function randomNum(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
-
 
 function fisrtCol() {
   let tr = document.createElement("tr");
@@ -77,6 +74,7 @@ function PatStors(cityName, minCust, maxCust, avgCookie) {
   this.maxCust = maxCust;
   this.avgCookie = avgCookie;
 
+  stores.push(this);
 
   // methods
   this.getRandomCust = function (min, max) {
@@ -86,9 +84,7 @@ function PatStors(cityName, minCust, maxCust, avgCookie) {
   this.getRandomCust = function () {
     randomNum(minCust, maxCust);
   };
-
 }
-
 
 // addToTable method as a prototybe
 PatStors.prototype.addToTable = function () {
@@ -100,36 +96,51 @@ PatStors.prototype.addToTable = function () {
   th.textContent = `${this.cityName}`;
 
   for (let i = 0; i < time.length; i++) {
-  
     let td = document.createElement("td");
     tr.appendChild(td);
-    let temp = Math.floor(randomNum(this.minCust, this.maxCust) * this.avgCookie);
-    let temp2 =temp;
+    let temp = Math.floor(
+      randomNum(this.minCust, this.maxCust) * this.avgCookie
+    );
+    let temp2 = temp;
     td.textContent = `${temp}`;
     total += temp;
-    if (i===0) { arr1.push(temp2); }
-    else if (i===1) { arr2.push(temp2); }
-    else if (i===2) { arr3.push(temp2); }
-    else if (i===3) { arr4.push(temp2); }
-    else if (i===4) { arr5.push(temp2); }
-    else if (i===5) { arr6.push(temp2); }
-    else if (i===6) { arr7.push(temp2); }
-    else if (i===7) { arr8.push(temp2); }
-    else if (i===8) { arr9.push(temp2); }
-    else if (i===9) { arr10.push(temp2); }
-    else if (i===10) { arr11.push(temp2); }
-    else if (i===11) { arr12.push(temp2); }
-    else if (i===12) { arr13.push(temp2); }
-    else if (i===13) { arr14.push(temp2); }
+    if (i === 0) {
+      arr1.push(temp2);
+    } else if (i === 1) {
+      arr2.push(temp2);
+    } else if (i === 2) {
+      arr3.push(temp2);
+    } else if (i === 3) {
+      arr4.push(temp2);
+    } else if (i === 4) {
+      arr5.push(temp2);
+    } else if (i === 5) {
+      arr6.push(temp2);
+    } else if (i === 6) {
+      arr7.push(temp2);
+    } else if (i === 7) {
+      arr8.push(temp2);
+    } else if (i === 8) {
+      arr9.push(temp2);
+    } else if (i === 9) {
+      arr10.push(temp2);
+    } else if (i === 10) {
+      arr11.push(temp2);
+    } else if (i === 11) {
+      arr12.push(temp2);
+    } else if (i === 12) {
+      arr13.push(temp2);
+    } else if (i === 13) {
+      arr14.push(temp2);
+    }
   }
-
 
   totalOfTotal.push(total);
 
   th = document.createElement("th");
   tr.appendChild(th);
   th.textContent = `${total}`;
-}
+};
 
 // last Col
 let lastCol = function () {
@@ -156,108 +167,91 @@ let lastCol = function () {
   th.textContent = `${x}`;
 };
 
-let sumofrows = function ()
-{
-  let sum=0;
-  for (let i = 0  ; i < arr1.length ; i++ )
-  {
-    sum+=arr1[i];
+let sumofrows = function () {
+  let sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr1[i];
   }
   sumOfRow[0] = sum;
-//
-  sum=0;
-  for (let i = 0  ; i < arr1.length ; i++ )
-  {
-    sum+=arr2[i];
+  //
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr2[i];
   }
   sumOfRow[1] = sum;
   //
-  sum=0;
-  for (let i = 0  ; i < arr1.length ; i++ )
-  {
-    sum+=arr3[i];
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr3[i];
   }
   sumOfRow[2] = sum;
-   //
-   sum=0;
-   for (let i = 0  ; i < arr1.length ; i++ )
-   {
-     sum+=arr4[i];
-   }
-   sumOfRow[3] = sum;
-    //
-  sum=0;
-  for (let i = 0  ; i < arr1.length ; i++ )
-  {
-    sum+=arr5[i];
+  //
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr4[i];
+  }
+  sumOfRow[3] = sum;
+  //
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr5[i];
   }
   sumOfRow[4] = sum;
-   //
-   sum=0;
-   for (let i = 0  ; i < arr1.length ; i++ )
-   {
-     sum+=arr6[i];
-   }
-   sumOfRow[5] = sum;
-    //
-  sum=0;
-  for (let i = 0  ; i < arr1.length ; i++ )
-  {
-    sum+=arr7[i];
+  //
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr6[i];
+  }
+  sumOfRow[5] = sum;
+  //
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr7[i];
   }
   sumOfRow[6] = sum;
-   //
-   sum=0;
-   for (let i = 0  ; i < arr1.length ; i++ )
-   {
-     sum+=arr8[i];
-   }
-   sumOfRow[7] = sum;
-    //
-  sum=0;
-  for (let i = 0  ; i < arr1.length ; i++ )
-  {
-    sum+=arr9[i];
+  //
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr8[i];
+  }
+  sumOfRow[7] = sum;
+  //
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr9[i];
   }
   sumOfRow[8] = sum;
-   //
-   sum=0;
-   for (let i = 0  ; i < arr1.length ; i++ )
-   {
-     sum+=arr10[i];
-   }
-   sumOfRow[9] = sum;
-    //
-  sum=0;
-  for (let i = 0  ; i < arr1.length ; i++ )
-  {
-    sum+=arr11[i];
+  //
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr10[i];
+  }
+  sumOfRow[9] = sum;
+  //
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr11[i];
   }
   sumOfRow[10] = sum;
-   //
-   sum=0;
-   for (let i = 0  ; i < arr1.length ; i++ )
-   {
-     sum+=arr12[i];
-   }
-   sumOfRow[11] = sum;
-    //
-  sum=0;
-  for (let i = 0  ; i < arr1.length ; i++ )
-  {
-    sum+=arr13[i];
+  //
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr12[i];
+  }
+  sumOfRow[11] = sum;
+  //
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr13[i];
   }
   sumOfRow[12] = sum;
-   //
-   sum=0;
-   for (let i = 0  ; i < arr1.length ; i++ )
-   {
-     sum+=arr14[i];
-   }
-   sumOfRow[13] = sum;
-}
-
-
+  //
+  sum = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr14[i];
+  }
+  sumOfRow[13] = sum;
+};
 
 // -----------------------------------------------
 let seattle = new PatStors("Seattle", 23, 65, 6.3); // creat objects from constructor
@@ -278,8 +272,38 @@ lima.addToTable();
 sumofrows();
 lastCol();
 
-
-
-
+// to check if my array working good
+//console.log(stores);
 
 // --------------------------------------------------------------
+
+////////////////////////////////////////// 6 MAY -- Event & Form /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let newStorform = document.getElementById("newStore"); // target the form from html by id
+
+newStorform.addEventListener("submit", submitter); // add event to it with function to do if event exist, remember:  dont use () with function here
+
+function submitter(event) {
+  //
+  // // i need to add parameter to my fun to check my fun works  ::  like (event)
+  event.preventDefault();
+  //console.log('Event working good' , event );
+
+  let storeLocation = event.target.storeLocation.value;
+  //console.log(storeLocation);
+
+  let maxSale = event.target.maxSale.value;
+  //console.log(maxSale);
+
+  let minSale = event.target.minSale.value;
+  //console.log(minSale);
+
+  let avgSale = event.target.avgSale.value;
+  //console.log(avgSale);
+
+
+  let myNewStor = new PatStors(storeLocation,minSale,maxSale,avgSale);
+  myNewStor.addToTable();
+  sumofrows();
+  lastCol();
+}
