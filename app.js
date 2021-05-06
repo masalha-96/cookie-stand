@@ -307,4 +307,6 @@ function submitter(event) {
   myNewStor.addToTable();
   sumofrows();
   lastCol();
+
+
 }
