@@ -19,6 +19,7 @@ const time = [
 let stores = [];
 
 let totalOfTotal = [];
+
 let arr1 = [];
 let arr2 = [];
 let arr3 = [];
@@ -66,7 +67,7 @@ let myDiv = document.getElementById("Sales");
 let table = document.createElement("table");
 myDiv.appendChild(table);
 
-// my constructor
+// ============================================================= My constructor=====================================================================
 function PatStors(cityName, minCust, maxCust, avgCookie) {
   this.numOfCust = 0;
   this.cityName = cityName;
@@ -86,7 +87,8 @@ function PatStors(cityName, minCust, maxCust, avgCookie) {
   };
 }
 
-// addToTable method as a prototybe
+// =============================================================ADD TO TABLE PROTOTYPE=====================================================================
+
 PatStors.prototype.addToTable = function () {
   let total = 0;
   let tr = document.createElement("tr");
@@ -143,7 +145,7 @@ PatStors.prototype.addToTable = function () {
   th.textContent = `${total}`;
 };
 
-// last Col
+// ============================================================= LastCol Function to make footer =====================================================================
 let lastCol = function () {
   let temp = 0;
   let tr = document.createElement("tr");
@@ -278,14 +280,13 @@ lastCol();
 
 // --------------------------------------------------------------
 
-////////////////////////////////////////// 6 MAY -- Event & Form /////////////////////////////////////////////////////////////////////////////////////////////////////
+// ============================================================= Event & Form =====================================================================
 
 let newStorform = document.getElementById("newStore"); // target the form from html by id
 
 newStorform.addEventListener("submit", submitter); // add event to it with function to do if event exist, remember:  dont use () with function here
 
 function submitter(event) {
-  //
   // // i need to add parameter to my fun to check my fun works  ::  like (event)
   event.preventDefault();
   //console.log('Event working good' , event );
@@ -303,10 +304,16 @@ function submitter(event) {
   //console.log(avgSale);
 
 
-  let myNewStor = new PatStors(storeLocation,minSale,maxSale,avgSale);
-  myNewStor.addToTable();
-  sumofrows();
-  lastCol();
+    
+      table.deleteRow(table.rows.length - 1); // to remove footer row when i'm adding new store
+      let myNewStor = new PatStors(storeLocation, minSale, maxSale, avgSale);
+      myNewStor.addToTable();
+      sumofrows();
+      lastCol();
 
+  
+
+   
 
 }
+
